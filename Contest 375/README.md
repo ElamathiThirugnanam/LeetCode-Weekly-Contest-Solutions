@@ -1,4 +1,4 @@
-# Weekly Contest 3
+# Weekly Contest 376
 Hello people! Here you will find my solution for the contest problems.
 
 ## Contest Information
