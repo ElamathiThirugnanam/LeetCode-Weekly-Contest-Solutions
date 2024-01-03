@@ -1,0 +1,28 @@
+class Solution {
+    public int[][] divideArray(int[] nums, int k) {
+        Arrays.sort(nums);
+        int[][] res=new int[nums.length/3][3];
+        int j=0;
+        for(int i=0;i<nums.length-2;i++)
+        {
+            int a=nums[i];
+            int b=nums[i+1];
+            int c=nums[i+2];
+            if(b-a<=k && c-a<=k && c-b<=k)
+            {
+                int[] res1=new int[3];
+                res1[0]=a;
+                res1[1]=b;
+                res1[2]=c;
+                i+=2;
+                res[j]=res1;
+                j++;
+            }
+        }
+        if(j!=nums.length/3)
+        {
+            return new int[0][0];
+        }
+        return res;
+    }
+}
